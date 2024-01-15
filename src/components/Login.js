@@ -8,12 +8,15 @@ import {
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import Header from "./Header";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
 
 const Login = () => {
   const [login, setLogin] = useState(true);
   const [errorMesage, setErrorMessage] = useState("");
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const email = useRef(null);
   const password = useRef(null);
@@ -49,9 +52,14 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user);
           navigate("/browse");
         })
+        // 3:46:00 -> Netflix GPT Project
+        // .then(() => {
+        //   const { uid, email } = auth.currentUser;
+        //   dispatch(addUser({ uid: uid, email: email }));
+        //   navigate("/browse");
+        // })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
@@ -68,6 +76,7 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           console.log(user);
+          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
