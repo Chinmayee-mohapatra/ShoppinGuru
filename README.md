@@ -1,3 +1,21 @@
+# ShoppinGuru
+
+- Create React App
+- Configured Tailwind CSS
+- Header
+- Routing of App
+- Login Form
+- Signup Form
+- Form Validation
+- useRef hook
+- Firebase Setup
+- Deploying app to production
+- Create Signup user account using Firebase
+- Implement SignIn user API
+- Created Redux Store with userSlice
+- Firebase gives an API: onAuthStateChanged, to keep track of any state changes (like signup, login, or logout).
+- _Based on the api we did the routing thing from login/signup to main page_
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
