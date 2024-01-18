@@ -7,6 +7,7 @@ import { addUser, removeUser } from "../utils/userSlice";
 import Login from "./Login";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import MainPage from "./MainPage";
+import ProductsPage from "./ProductsPage";
 
 const Body = () => {
   const dispatch = useDispatch();
@@ -19,6 +20,10 @@ const Body = () => {
     {
       path: "/browse",
       element: <MainPage />,
+    },
+    {
+      path: "/products",
+      element: <ProductsPage />,
     },
   ]);
 
