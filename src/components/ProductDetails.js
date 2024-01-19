@@ -43,10 +43,12 @@ const ProductDetails = () => {
           <div className="flex justify-between text-xl">
             <p className="font-semibold">$ {price}</p>
             <p className="flex items-center gap-1">
-              {rating} <IoMdStar fill="green" />
+              Rating: {Math.round(rating)} <IoMdStar fill="green" />
             </p>
           </div>
-          <div className="text-red-700">{discountPercentage}% off</div>
+          <div className="text-red-700">
+            {Math.round(discountPercentage)}% off
+          </div>
           <div>Stock: {stock} left</div>
           <div className="text-lg">{description}</div>
           <div className="flex justify-between font-semibold gap-4 mt-4">
