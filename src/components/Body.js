@@ -8,6 +8,7 @@ import Login from "./Login";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import MainPage from "./MainPage";
 import ProductsPage from "./ProductsPage";
+import ProductDetails from "./ProductDetails";
 
 const Body = () => {
   const dispatch = useDispatch();
@@ -24,6 +25,10 @@ const Body = () => {
     {
       path: "/products",
       element: <ProductsPage />,
+    },
+    {
+      path: "/products/product-details/:prodID",
+      element: <ProductDetails />,
     },
   ]);
 

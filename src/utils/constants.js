@@ -14,7 +14,7 @@ export const CATEGORIES_API = "https://dummyjson.com/products/categories";
 
 export const PRODUCTS_LIST_API = "https://dummyjson.com/products";
 
-export const SINGLE_PRODUCT_API = "https://dummyjson.com/products/:id";
+export const SINGLE_PRODUCT_API = "https://dummyjson.com/products/";
 
 export const SEARCH_PRODUCT = "https://dummyjson.com/products/search?q=";
 

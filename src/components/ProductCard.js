@@ -23,7 +23,7 @@ const ProductCard = ({ prodData }) => {
             {title.length > 20 ? `${title.substring(0, 20)}...` : title}
           </h2>
           <p className="flex items-center gap-1 text-sm md:text-base font-semibold">
-            Rs. {price}{" "}
+            $ {price}{" "}
             <span className="text-orange-700 text-xs md:text-sm font-normal">
               {discountPercentage.toFixed()}% off
             </span>
