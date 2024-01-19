@@ -3,10 +3,12 @@ import { useParams } from "react-router-dom";
 import useProductDetails from "../utils/useProductDetails";
 import Header from "./Header";
 import { IoMdStar } from "react-icons/io";
+import { useDispatch } from "react-redux";
+import { addCartItem } from "../utils/cartSlice";
 
 const ProductDetails = () => {
   const [count, setCount] = useState(1);
-
+  const dispatch = useDispatch();
   const { prodID } = useParams();
   const prodInfo = useProductDetails(prodID);
   const {
@@ -30,6 +32,10 @@ const ProductDetails = () => {
 
   const handleProductImage = (image) => {
     setProdImg(image);
+  };
+
+  const handleAddToCart = () => {
+    dispatch(addCartItem(prodInfo));
   };
 
   return (
@@ -70,7 +76,10 @@ const ProductDetails = () => {
               </button>
             </div>
             <div className=" text-xs sm:text-sm lg:text-lg">
-              <button className="bg-green-700 rounded-md  text-white w-full py-1 sm:py-2 px-1 md:px-4 hover:bg-green-900">
+              <button
+                onClick={() => handleAddToCart()}
+                className="bg-green-700 rounded-md  text-white w-full py-1 sm:py-2 px-1 md:px-4 hover:bg-green-900"
+              >
                 Add to Cart
               </button>
             </div>
