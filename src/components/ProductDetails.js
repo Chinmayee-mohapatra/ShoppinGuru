@@ -10,7 +10,6 @@ const ProductDetails = () => {
   const { prodID } = useParams();
   const prodInfo = useProductDetails(prodID);
   const {
-    id,
     title,
     description,
     discountPercentage,
@@ -84,7 +83,6 @@ const ProductDetails = () => {
             />
           </div>
           <div className="flex gap-2 justify-center">
-            {/* Show Images - With options to show up different images */}
             {images?.map((image, i) => (
               <div
                 key={i}
