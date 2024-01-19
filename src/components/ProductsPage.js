@@ -22,10 +22,10 @@ const ProductsPage = () => {
   return (
     <div>
       <Header />
-      <ul className="flex flex-wrap justify-center mx-10 my-20">
+      <ul className="flex flex-wrap justify-evenly md:justify-center mx-4 my-10 md:mx-10 md:my-20 bg-[#0A2F4C]">
         {listOfProducts &&
           listOfProducts.map((prod) => (
-            <li className="">
+            <li key={prod.id} className="">
               <ProductCard prodData={prod} />
             </li>
           ))}
