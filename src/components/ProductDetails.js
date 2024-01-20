@@ -65,7 +65,7 @@ const ProductDetails = () => {
               <button
                 onClick={() => decrementCount()}
                 className={`px-2 ${
-                  count <= 0 ? `cursor-not-allowed` : `cursor-pointer`
+                  count <= 1 ? `cursor-not-allowed` : `cursor-pointer`
                 }`}
               >
                 -
