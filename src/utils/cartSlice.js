@@ -29,7 +29,7 @@ const cartSlice = createSlice({
       localStorage.setItem("totalPrice", JSON.stringify(state.totalPrice));
       localStorage.setItem("totalItems", JSON.stringify(state.totalItems));
 
-      console.log(current(state.cart));
+      // console.log(current(state.cart));
     },
     removeCartItem: () => {
       return null;

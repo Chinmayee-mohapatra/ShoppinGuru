@@ -11,7 +11,7 @@ const HeroSection = () => {
   const fetchCategories = async () => {
     const categories = await fetch(CATEGORIES_API);
     const category_data = await categories.json();
-    console.log(category_data);
+    // console.log(category_data);
     setCategories(category_data);
   };
 

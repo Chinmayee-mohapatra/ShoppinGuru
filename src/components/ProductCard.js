@@ -3,7 +3,7 @@ import { IoMdStar } from "react-icons/io";
 import { IoHeartOutline } from "react-icons/io5";
 
 const ProductCard = ({ prodData }) => {
-  console.log("Product data: ", prodData);
+  // console.log("Product data: ", prodData);
   const { title, price, rating, discountPercentage, thumbnail } = prodData;
 
   const handlePlaceOrder = () => {

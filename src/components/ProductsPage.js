@@ -10,7 +10,7 @@ const ProductsPage = () => {
   return (
     <div>
       <Header />
-      <div className="flex flex-wrap justify-evenly md:justify-center mx-4 my-10 md:mx-10 md:my-20 bg-[#0A2F4C]">
+      <div className="flex flex-wrap justify-evenly md:justify-center mx-4 my-10 md:mx-10 md:my-20 rounded-md bg-[#0A2F4C]">
         {listOfProducts &&
           listOfProducts.map((prod) => (
             <Link
